@@ -1,18 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  --primary-color: #ff9e1f;
+  --secondary-color: #ffdb09;
+  --color-black: #1e1e1e;
+  --color-accent: rgba(38, 37, 37, 0.789);
+  --color-white: #fafafa;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Typography start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Chivo", sans-serif;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: var(--color-white);
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+/* Typography end */
+
+/* Basic Styles Start */
+button,
+.btn {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  color: black;
+}
+
+/* Basic Styles End */
+
+nav,
+section {
+  padding: 16px 160px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 42px;
 }
 
 nav h3 {
-  color: rgb(169, 75, 169);
+  color: var(--primary-color);
   font-size: 32px;
 }
 
@@ -23,7 +100,116 @@ nav ul {
 }
 
 nav ul a {
-  color: black;
   text-decoration: none;
   font-size: 20px;
 }
+
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+  gap: 16px;
+}
+
+.hero-image {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+  border-radius: 50%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text h2 {
+  color: var(--primary-color);
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.hero-text span {
+  font-weight: 500;
+}
+
+.hero-text span,
+.hero-desc {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.hero-desc {
+  max-width: 600px;
+}
+
+/* Project Section Start */
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+p.sub-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white);
+  opacity: 0.9;
+}
+
+.project-card {
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.project-image {
+  overflow: hidden;
+  width: 100%;
+}
+
+.project-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+  transition: 0.3s all ease-in-out;
+}
+
+.project-card .card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 14px;
+}
+
+.project-card p.card-description {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.project-card a {
+  text-decoration: none;
+  font-size: 18px;
+  background-color: var(--color-accent);
+  width: fit-content;
+  padding: 3px;
+  font-family: "Chivo", sans-serif;
+  border-radius: 2px;
+  color: var(--secondary-color);
+  box-shadow: 10px 0 0 inset var(--color-accent);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Project Section End */
