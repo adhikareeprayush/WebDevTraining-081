@@ -11,9 +11,9 @@
       <h3>Logo.</h3>
       <ul>
         <li><a href="#hero">Home</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <section id="hero">
@@ -115,7 +115,7 @@
     </section>
     <section id="about">
       <div class="details">
-        <h4>About Myself!</h4>
+        <h3>About Myself!</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
           reprehenderit, nisi quisquam dolorum vel, sunt consequatur optio hic
@@ -123,12 +123,57 @@
           Rerum, ipsum quas!
         </p>
         <div class="social-links">
-          <a href="#">Linkedin</a>
-          <a href="#">Twitter</a>
-          <a href="#">Instagram</a>
+          <a href="#">
+            <img src="./icons/twitter.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="./icons/insta.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="./icons/fb.svg" alt="" />
+          </a>
         </div>
-        <img src="image.png" alt="" class="about-img" width="300" />
       </div>
+      <img src="image.png" alt="" class="about-img" width="300" />
     </section>
+    <section id="contact">
+      <div class="title">
+        <h2>Contact Me</h2>
+        <p class="sub-title">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum!
+        </p>
+      </div>
+      <form action="">
+        <div class="inputs">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <div class="inputs">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div class="inputs">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="5">
+Enter your message</textarea
+          >
+        </div>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </section>
+    <section id="footer">Made with ❤️ ACES</section>
   </body>
 </html>

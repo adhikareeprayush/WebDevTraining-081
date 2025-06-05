@@ -80,6 +80,7 @@ button,
 nav,
 section {
   padding: 16px 160px;
+  margin-bottom: 48px;
 }
 
 nav {
@@ -213,3 +214,135 @@ p.sub-title {
 }
 
 /* Project Section End */
+
+/* About section start */
+section#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: red; */
+}
+
+#about .details {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+}
+
+#about .about-img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border: 5px solid var(--primary-color);
+}
+
+#about .social-links {
+  display: flex;
+  gap: 8px;
+}
+
+#about .social-links img {
+  width: 36px;
+}
+
+/* About section End */
+
+/* Contact Section Start */
+section#contact form {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+section#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+section#contact form .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+section#contact label {
+  font-size: 18px;
+}
+
+input,
+textarea {
+  border: 1px solid rgb(211, 211, 211);
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  width: 300px;
+  color: var(--color-white);
+}
+
+input::placeholder {
+  color: var(--color-white);
+}
+
+textarea {
+  resize: none;
+}
+
+section#contact form button {
+  font-size: 16px;
+}
+
+/* Contact Section End */
+
+/* Footer Section Start */
+section#footer {
+  margin-bottom: 10px;
+}
+/* Footer Section End */
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  nav,
+  section {
+    padding-inline: 24px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  .hero-text span,
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  .hero-desc {
+    max-width: 400px;
+  }
+
+  .hero-image {
+    height: 300px;
+    width: 300px;
+  }
+
+  #hero {
+    min-height: 60vh;
+  }
+
+  .project-list {
+    grid-template-columns: repeat(2, 300px);
+    place-content: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .project-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
